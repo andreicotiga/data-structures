@@ -27,5 +27,17 @@ class BinaryTreeTests(unittest.TestCase):
         with self.assertRaises(ValueError):
             self.root.add(13)
 
+    def test_in_order(self):
+        actual = self.root.in_order()
+        self.assertEqual(actual, [2, 3, 4, 5, 7, 10, 13, 15, 17])
+
+    def test_max_height(self):
+        actual = self.root.max_height()
+        self.assertEqual(actual, 4)
+
+    def test_min_height(self):
+        actual = self.root.min_height()
+        self.assertEqual(actual, 3)
+
 if __name__ == '__main__':
     unittest.main()
