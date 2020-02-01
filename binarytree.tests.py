@@ -23,7 +23,7 @@ class BinaryTreeTests(unittest.TestCase):
         self.assertIsNotNone(self.root.right)
         self.assertEqual(self.root.right.info, 15)
 
-    def test_add_same_info_throws(self):
+    def test_add_same_info_twice_throws(self):
         with self.assertRaises(ValueError):
             self.root.add(13)
 

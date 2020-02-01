@@ -101,3 +101,6 @@ venv.bak/
 /site
 
 # mypy
+
+#Visual Studio code
+.vscode/*
