@@ -1,6 +1,7 @@
 import unittest
 from binarytree import Node
 
+
 class BinaryTreeTests(unittest.TestCase):
 
     def __init__(self, *args, **kwargs):
@@ -38,6 +39,7 @@ class BinaryTreeTests(unittest.TestCase):
     def test_min_height(self):
         actual = self.root.min_height()
         self.assertEqual(actual, 3)
+
 
 if __name__ == '__main__':
     unittest.main()

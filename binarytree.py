@@ -18,7 +18,7 @@ class Node:
                 self.right.add(info)
         else:
             raise ValueError('Cannot insert duplicate value: ' + str(info))
-    
+
     def in_order(self):
         infos = []
         Node._in_order(self, infos)
@@ -35,30 +35,27 @@ class Node:
     def max_height(self):
         if self.left is None and self.right is None:
             return 1
-        l = 0
-        r = 0
+        left = 0
+        right = 0
         if self.left is not None:
-            l = self.left.max_height()
+            left = self.left.max_height()
         if self.right is not None:
-            r = self.right.max_height()
-        
-        if l > r:
-            return l+1
-        return r+1
+            right = self.right.max_height()
+
+        if left > right:
+            return left + 1
+        return right + 1
 
     def min_height(self):
         if self.left is None and self.right is None:
             return 1
-        l = 0
-        r = 0
+        left = 0
+        right = 0
         if self.left is not None:
-            l = self.left.min_height()
+            left = self.left.min_height()
         if self.right is not None:
-            r = self.right.min_height()
-        
-        if l < r:
-            return l+1
-        return r+1
+            right = self.right.min_height()
 
-
-        
+        if left < right:
+            return left + 1
+        return right + 1
